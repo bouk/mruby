@@ -1059,7 +1059,9 @@ gen_vmassignment(codegen_scope *s, node *tree, int rhs, int val)
         n++;
       }
     }
-    push();
+    if (!val) {
+      push();
+    }
   }
 }
 
